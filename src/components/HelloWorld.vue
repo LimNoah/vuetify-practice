@@ -632,6 +632,11 @@
             </v-list>
           </v-bottom-sheet>
         </div>
+        <div class="text-center">
+          <v-btn block>
+            Block Button
+          </v-btn>
+        </div>
       </v-col>
       
       <v-col
