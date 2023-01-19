@@ -855,6 +855,21 @@
       ></v-text-field>
       <v-text-field label="Another input"></v-text-field>
     </div>
+    <v-row>
+      <v-switch
+        v-model="showMessages"
+        label="Show messages"
+      ></v-switch>
+      <v-input
+        hint="I am hint"
+        persistent-hint
+        :messages="messages"
+      >
+        Input
+      </v-input>
+    </v-row>
+    
+
   </v-container>
 
 </template>
