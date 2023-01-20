@@ -873,6 +873,13 @@
       loading
       disabled
     ></v-text-field>
+    <v-input
+      :success-messages="['Success']"
+      success
+      disabled
+    >
+      Input
+    </v-input>
 
   </v-container>
 
