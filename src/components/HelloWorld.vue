@@ -1000,7 +1000,7 @@
         </v-sheet>
       </v-col>
     </v-row>
-    <!-- <v-row>
+    <v-row>
       <v-col>
         <v-sheet height="400">
           <v-calendar
@@ -1013,7 +1013,7 @@
           ></v-calendar>
         </v-sheet>
       </v-col>
-    </v-row> -->
+    </v-row>
 
   </v-container>
 
