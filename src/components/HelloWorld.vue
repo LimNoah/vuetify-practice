@@ -1044,6 +1044,26 @@
       </v-col>
     </v-row>
 
+    <v-row>
+      <v-col>
+        <v-sheet height="500">
+          <v-calendar
+            ref="calendar"
+            v-model="value"
+            type="week"
+          >
+            <template v-slot:day-body="{ date, week }">
+              <div
+                class="v-current-time"
+                :class="{ first: date === week[0].date }"
+                :style="{ top: nowY }"
+              ></div>
+            </template>
+          </v-calendar>
+        </v-sheet>
+      </v-col>
+    </v-row>
+    
   </v-container>
 
 </template>
