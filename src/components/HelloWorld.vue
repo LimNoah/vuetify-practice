@@ -1063,7 +1063,39 @@
         </v-sheet>
       </v-col>
     </v-row>
-    
+    <v-row class="fill-height">
+      <v-col>
+        <v-sheet height="600">
+          <v-calendar
+            ref="calendar"
+            v-model="value"
+            color="primary"
+            type="4day"
+            :events="events"
+            :event-color="getEventColor"
+            :event-ripple="false"
+            @change="getEvents"
+            @mousedown:event="startDrag"
+            @mousedown:time="startTime"
+            @mousemove:time="mouseMove"
+            @mouseup:time="endDrag"
+            @mouseleave.native="cancelDrag"
+          >
+            <template v-slot:event="{ event, timed, eventSummary }">
+              <div class="v-event-draggable">
+                <component :is="{ render: eventSummary }"></component>
+              </div>
+              <div
+                v-if="timed"
+                class="v-event-drag-bottom"
+                @mousedown.stop="extendBottom(event)"
+              ></div>
+            </template>
+          </v-calendar>
+        </v-sheet>
+      </v-col>
+    </v-row>
+
   </v-container>
 
 </template>
