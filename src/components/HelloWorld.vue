@@ -1860,6 +1860,14 @@
         Green Chip
       </v-chip>
     </div>
+    <v-row
+      justify="center"
+      align="center"
+    >
+      <v-chip draggable>
+        Default
+      </v-chip>
+    </v-row>
 
   </v-container>
 
