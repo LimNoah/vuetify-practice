@@ -1905,6 +1905,14 @@
         New Tweets
       </v-chip>
     </div>
+    <v-row
+      justify="center"
+      align="center"
+    >
+      <v-chip :ripple="false" link>
+        Default
+      </v-chip>
+    </v-row>
 
   </v-container>
 
