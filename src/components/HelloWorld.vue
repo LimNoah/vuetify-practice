@@ -2265,7 +2265,71 @@
         ></v-textarea>
       </div>
     </v-card>
-    
+    <v-card
+      class="mx-auto"
+      max-width="450"
+    >
+      <v-toolbar
+        color="primary"
+        height="88"
+        flat
+      >
+        <template v-slot:prepend>
+          <v-btn icon="mdi-arrow-left">
+          </v-btn>
+        </template>
+
+        <v-text-field
+          v-model="search"
+          clearable
+          hide-details
+          label="Search News"
+          prepend-inner-icon="mdi-magnify"
+          single-line
+        ></v-text-field>
+
+        <template v-slot:append>
+          <v-btn icon="mdi-dots-vertical"></v-btn>
+        </template>
+      </v-toolbar>
+
+      <div v-if="keywords.length > 0" class="py-3 px-4">
+        <v-chip
+          v-for="(keyword, i) in keywords"
+          :key="i"
+          class="me-2"
+        >
+          {{ keyword }}
+        </v-chip>
+
+      </div>
+
+      <v-divider></v-divider>
+
+      <v-list lines="three">
+        <v-list-item
+          v-for="(item, i) in searching"
+          :key="i"
+          link
+        >
+          <template v-slot:prepend>
+            <v-avatar
+              class="me-4 mt-2"
+              rounded="0"
+            >
+              <v-img :src="item.image" cover></v-img>
+            </v-avatar>
+          </template>
+
+          <v-list-item-title
+            class="text-uppercase font-weight-regular text-caption"
+            v-text="item.category"
+          ></v-list-item-title>
+
+          <div v-text="item.title"></div>
+        </v-list-item>
+      </v-list>
+    </v-card>
 
   </v-container>
 
