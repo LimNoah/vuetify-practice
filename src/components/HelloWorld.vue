@@ -2353,6 +2353,19 @@
         </v-chip>
       </template>
     </v-combobox>
+    <div class="d-flex justify-space-around">
+      <v-color-picker
+        v-model="c1"
+        hide-canvas
+        hide-sliders
+      ></v-color-picker>
+
+      <v-color-picker
+        v-model="c2"
+        hide-inputs
+        show-swatches
+      ></v-color-picker>
+    </div>
 
   </v-container>
 
