@@ -2557,6 +2557,56 @@
         src="https://picsum.photos/700?image=996"
       ></v-img>
     </v-card>
+    <v-card
+      class="mx-auto"
+      max-width="400"
+    >
+      <v-toolbar
+        color="orange-lighten-1"
+        dark
+      >
+        <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
+        <v-toolbar-title>Message Board</v-toolbar-title>
+
+        <v-btn icon>
+          <v-icon>mdi-magnify</v-icon>
+        </v-btn>
+      </v-toolbar>
+
+      <v-list lines="two">
+        <template v-for="(item, index) in items">
+          <v-list-subheader
+            v-if="item.header"
+            :key="item.header"
+            inset
+          >
+            {{ item.header }}
+          </v-list-subheader>
+
+          <v-divider
+            v-else-if="item.divider"
+            :key="index"
+            inset
+          ></v-divider>
+
+          <v-list-item
+            v-else
+            :key="item.title"
+            :prepend-avatar="item.avatar"
+            ripple
+          >
+            <template v-slot:title>
+              <div v-html="item.title"></div>
+            </template>
+
+            <template v-slot:subtitle>
+              <div v-html="item.subtitle"></div>
+            </template>
+          </v-list-item>
+        </template>
+      </v-list>
+    </v-card>
 
   </v-container>
 
