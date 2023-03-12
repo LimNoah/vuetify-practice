@@ -2608,6 +2608,109 @@
       </v-list>
     </v-card>
 
+    <v-card>
+      <v-container fluid>
+        <v-row>
+          <v-col cols="12">
+            <v-autocomplete
+              v-model="values"
+              :items="items"
+              label="Default"
+            ></v-autocomplete>
+          </v-col>
+
+          <v-col cols="12">
+            <v-autocomplete
+              v-model="values"
+              :items="items"
+              density="comfortable"
+              label="Comfortable"
+            ></v-autocomplete>
+          </v-col>
+
+          <v-col cols="12">
+            <v-autocomplete
+              v-model="values"
+              :items="items"
+              density="compact"
+              label="Compact"
+            ></v-autocomplete>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-card>
+
+    <v-card
+      class="mx-auto"
+      color="purple-lighten-1"
+      max-width="500"
+    >
+      <v-toolbar flat color="purple">
+        <v-btn icon="mdi-account"></v-btn>
+
+        <v-toolbar-title class="font-weight-light">
+          User Profile
+        </v-toolbar-title>
+
+        <v-spacer></v-spacer>
+
+        <v-btn
+          icon
+          @click="isEditing = !isEditing"
+        >
+          <v-fade-transition leave-absolute>
+            <v-icon v-if="isEditing">mdi-close</v-icon>
+
+            <v-icon v-else>mdi-pencil</v-icon>
+          </v-fade-transition>
+        </v-btn>
+      </v-toolbar>
+
+      <v-card-text>
+        <v-text-field
+          :disabled="!isEditing"
+          color="white"
+          label="Name"
+        ></v-text-field>
+
+        <v-autocomplete
+          :disabled="!isEditing"
+          :items="states"
+          :custom-filter="customFilter"
+          color="white"
+          item-title="name"
+          item-value="abbr"
+          label="State"
+        ></v-autocomplete>
+      </v-card-text>
+
+      <v-divider></v-divider>
+
+      <v-card-actions>
+        <v-spacer></v-spacer>
+
+        <v-btn
+          :disabled="!isEditing"
+          @click="save"
+        >
+          Save
+        </v-btn>
+      </v-card-actions>
+
+      <v-snackbar
+        v-model="hasSaved"
+        :timeout="2000"
+        attach
+        position="absolute"
+        location="bottom left"
+      >
+        Your profile has been updated
+      </v-snackbar>
+    </v-card>
+
+    
+
+
   </v-container>
 
 </template>
