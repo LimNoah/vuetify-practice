@@ -2845,8 +2845,24 @@
         </v-btn>
       </v-card-actions>
     </v-card>
-    
+    <v-toolbar color="teal">
+      <v-toolbar-title>State selection</v-toolbar-title>
 
+      <v-autocomplete
+        v-model="select"
+        :loading="loading"
+        :items="items"
+        class="mx-4"
+        density="comfortable"
+        hide-no-data
+        hide-details
+        label="What state are you from?"
+        style="max-width: 300px;"
+      ></v-autocomplete>
+
+      <v-btn icon="mdi-dots-vertical"></v-btn>
+    </v-toolbar>
+    
 
   </v-container>
 
