@@ -2862,7 +2862,17 @@
 
       <v-btn icon="mdi-dots-vertical"></v-btn>
     </v-toolbar>
-    
+    <div>
+      <v-breadcrumbs
+        :items="items"
+        divider="-"
+      ></v-breadcrumbs>
+
+      <v-breadcrumbs
+        :items="items"
+        divider="."
+      ></v-breadcrumbs>
+    </div>
 
   </v-container>
 
