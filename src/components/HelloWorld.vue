@@ -2892,6 +2892,11 @@
         </template>
       </v-breadcrumbs>
     </div>
+    <v-breadcrumbs :items="items">
+      <template v-slot:title="{ item }">
+        {{ item.title.toUpperCase() }}
+      </template>
+    </v-breadcrumbs>
 
   </v-container>
 
