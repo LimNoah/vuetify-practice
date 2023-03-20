@@ -2872,6 +2872,25 @@
         :items="items"
         divider="."
       ></v-breadcrumbs>
+
+      <v-breadcrumbs :items="items">
+        <template v-slot:prepend>
+          <v-icon size="small" icon="mdi-vuetify"></v-icon>
+        </template>
+      </v-breadcrumbs>
+    </div>
+    <div>
+      <v-breadcrumbs :items="items">
+        <template v-slot:divider>
+          <v-icon icon="mdi-forward"></v-icon>
+        </template>
+      </v-breadcrumbs>
+
+      <v-breadcrumbs :items="items">
+        <template v-slot:divider>
+          <v-icon icon="mdi-chevron-right"></v-icon>
+        </template>
+      </v-breadcrumbs>
     </div>
 
   </v-container>
