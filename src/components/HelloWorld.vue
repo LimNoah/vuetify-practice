@@ -2910,7 +2910,7 @@
         </v-system-bar>
       </v-layout>
 
-      <!-- <v-layout style="height: 50px">
+      <v-layout style="height: 50px">
         <v-system-bar color="red-lighten-2">
           <v-icon icon="mdi-wifi-strength-2" class="ms-2"></v-icon>
 
@@ -2932,7 +2932,7 @@
 
           <span class="ms-2">13:24</span>
         </v-system-bar>
-      </v-layout> -->
+      </v-layout>
     </div>
 
   </v-container>
