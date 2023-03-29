@@ -2975,7 +2975,7 @@
       </v-btn-toggle>
     </v-col>
 
-    <!-- <v-col
+    <v-col
       cols="12"
       sm="6"
       class="py-2"
@@ -3133,7 +3133,7 @@
           </v-icon>
         </v-btn>
       </v-btn-toggle>
-    </v-col> -->
+    </v-col>
   </v-row>
 
     </div>
