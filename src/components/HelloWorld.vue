@@ -3341,6 +3341,17 @@
         </v-btn>
       </template>
     </v-banner>
+    <div>
+      <v-breadcrumbs
+        :items="items"
+        divider="-"
+      ></v-breadcrumbs>
+
+      <v-breadcrumbs
+        :items="items"
+        divider="."
+      ></v-breadcrumbs>
+    </div>
 
   </v-container>
 
