@@ -3352,6 +3352,14 @@
         divider="."
       ></v-breadcrumbs>
     </div>
+    <div>
+      <v-breadcrumbs :items="items"></v-breadcrumbs>
+
+      <v-breadcrumbs
+        :items="items"
+        large
+      ></v-breadcrumbs>
+    </div>
 
   </v-container>
 
