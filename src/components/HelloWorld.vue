@@ -3447,6 +3447,16 @@
 
       <v-spacer></v-spacer>
     </v-toolbar>
+    <v-hover>
+      <template v-slot:default="{ isHovering, props }">
+        <v-card
+          v-bind="props"
+          :color="isHovering ? 'primary' : undefined"
+          title="Hover over me"
+          text="..."
+        ></v-card>
+      </template>
+    </v-hover>
   </v-container>
 
 </template>
