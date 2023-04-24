@@ -3542,6 +3542,16 @@
         <span class="white--text text-h5">62</span>
       </v-avatar>
     </v-row>
+    <div class="text-center">
+      <v-avatar
+        tile
+        color="blue"
+      >
+        <v-icon dark>
+          mdi-alarm
+        </v-icon>
+      </v-avatar>
+    </div>
   </v-container>
 
 </template>
