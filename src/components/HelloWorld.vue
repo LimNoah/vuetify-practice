@@ -4220,6 +4220,14 @@
         <v-card title="Title" subtitle="Subtitle" class="ma-10"></v-card>
       </v-defaults-provider>
     </div>
+    <v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"></v-parallax>
+    <div class="text-center">
+      <v-rating
+        v-model="rating"
+        bg-color="orange-lighten-1"
+        color="blue"
+      ></v-rating>
+    </div>
   </v-container>
 </template>
 
