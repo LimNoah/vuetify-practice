@@ -4235,7 +4235,14 @@
         color="blue"
       ></v-rating>
     </div>
-    
+    <div class="d-flex flex-column align-center justify-center">
+      <v-rating
+        v-model="rating"
+        class="ma-2"
+        density="default"
+      ></v-rating>
+      
+    </div>
   </v-container>
 </template>
 
