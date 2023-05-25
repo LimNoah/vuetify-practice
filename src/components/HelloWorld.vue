@@ -4228,6 +4228,14 @@
         color="blue"
       ></v-rating>
     </div>
+    <div class="text-center">
+      <v-rating
+        v-model="rating"
+        bg-color="orange-lighten-1"
+        color="blue"
+      ></v-rating>
+    </div>
+    
   </v-container>
 </template>
 
