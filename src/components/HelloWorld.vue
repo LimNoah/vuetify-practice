@@ -4241,7 +4241,11 @@
         class="ma-2"
         density="default"
       ></v-rating>
-      
+      <v-rating
+        v-model="rating"
+        class="ma-2"
+        density="comfortable"
+      ></v-rating>
     </div>
   </v-container>
 </template>
