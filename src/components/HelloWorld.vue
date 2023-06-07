@@ -4294,6 +4294,19 @@
         item-aria-label="custom icon label text {0} of {1}"
       ></v-rating>
     </div>
+    <div class="text-center">
+      <v-rating v-model="rating">
+        <template v-slot:item="props">
+          <v-icon
+            :color="props.isFilled ? colors[props.index] : 'grey-lighten-1'"
+            size="large"
+            @click="props.onClick"
+          >
+            {{ props.isFilled ? 'mdi-star-circle' : 'mdi-star-circle-outline' }}
+          </v-icon>
+        </template>
+      </v-rating>
+    </div>
   </v-container>
 </template>
 
